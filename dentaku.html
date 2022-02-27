@@ -1,58 +1,64 @@
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>  
-        <link rel="stylesheet" href="dentaku.css">
-        <title>電卓</title>
-      </head>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>  
+      <link rel="stylesheet" href="dentaku.css">
+      <title>電卓</title>
+    </head>
  
-      <body>
-        <table class="AllTabel">
-          <!--液晶画面-->
-          <tr>
-            <tdc id="DisPlay" olspan="4">しかく！！！</td>
-          </tr>
+    <body>
+        <!--演算子にのみクラスを追加、ACは別の方がいいだろうか？-->
+      <form name="dentaku">
+        <!--先頭につけない0にクラス:NoLeadを追加-->
+       <table class="AllTabel">
+        <!--液晶画面-->
+         <tr>
+           <td colspan="4">
+             <input type="text" class="display" name="display" value="" disabled>
+           </td>
+         </tr>
           
           <!--１行目-->
-          <tr>
-            <td id="7" class="Btn">7</td>
-            <td id="8" class="Btn">8</td>
-            <td id="9" class="Btn">9</td>
-            <td id="+" class="Btn">+</td>
-          </tr>
+         <tr>
+           <td><input id="Btn" type="button" value="7" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="8" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="9" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="+" onclick="get_calc(this)"></td>
+         </tr>
           
           <!--２行目-->
-          <tr>
-            <td id="6" class="Btn">6</td>
-            <td id="5" class="Btn">5</td>
-            <td id="4" class="Btn">4</td>
-            <td id="-" class="Btn">-</td>
-          </tr>
+         <tr>
+           <td><input id="Btn" type="button" value="6" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="5" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="4" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="-" onclick="get_calc(this)"></td>
+         </tr>
           
           <!--３行目-->
-          <tr>
-            <td id="3" class="Btn">3</td>
-            <td id="2" class="Btn">2</td>
-            <td id="1" class="Btn">1</td>
-            <td id="*" class="Btn">*</td>
-          </tr>
-          
-          <!--４行目-->
-          <tr>
-            <td id="0" class="Btn">0</td>
-            <td id="00" class="Btn">00</td>
-            <td id="point" class="Btn">.</td>
-            <td id="slash" class="Btn">/</td>
-          </tr>
+         <tr>
+           <td><input id="Btn" type="button" value="3" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="2" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="1" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="×" onclick="get_calc(this)"></td>
+         </tr>
+        
+        <!--４行目-->
+         <tr>
+           <td><input id="Btn" type="button" value="0" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="00" onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="." onclick="get_calc(this)"></td>
+           <td><input id="Btn" type="button" value="÷" onclick="get_calc(this)"></td>
+         </tr>
           
           <!--５行目-->
-          <tr>
-            <td id="AC" colspan="2" class="Btn2">AC</td>
-            <td id="equal" colspan="2" class="Btn2">＝</td>
-          </tr>
-          
-        </table>
-        <script src="dentaku.js"></script>
-      </body>
-    </html>
+         <tr>
+           <td colspan="2"><input class="BtnWide"type="button" value="AC" onclick="get_calc(this)"></td>
+           <td colspan="2"><input class="BtnWide" type="button" value="=" onclick="get_calc(this)"></td>
+         </tr>
+           
+       </table>
+       <script src="dentaku.js"></script>
+      </form>
+     </body>
+   </html>
