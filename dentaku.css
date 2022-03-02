@@ -34,12 +34,17 @@
 
 /*ボタンが触れた時、押した時のホバー*/
 .Btn:hover{
-    opacity:0.5;
+  opacity:0.5;
 }
 
 .BtnWide:hover{
-    opacity:0.5;
+  opacity:0.5;
 }
 
+:disabled{
+  color:#000000;
+  background:#dcdcdc;
+  
+}
 /*クリック時のhover*/
 

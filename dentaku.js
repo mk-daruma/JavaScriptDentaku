@@ -8,26 +8,38 @@ let minus = document.getElementById("minus");
 let multi = document.getElementById("multi");
 let divide = document.getElementById("divide");
 
-  // ディスプレイにボタンの値を表示
+// 最初から特定のボタンを非活性
+addDisabled();
+
 function btn(button){
-  display.value += button.value;
-}
-
-
-// ＝とACのボタンの機能
-function operator(button){
-    if(button.value == "="){
+  if(button.value == "="){
     display.value = eval(display.value);
   }else if(button.value == "AC"){
     display.value = "";
-  }
+    addDisabled();
+  }else if(button.value == "+" ){
+    display.value += "+";
+    addOperatorDisabled();
+  }else if(button.value == "-" ){
+    display.value += "-";
+    addOperatorDisabled();
+    equals.disabled = false;
+  }else if(button.value == "*" ){
+    display.value += "*";
+    addOperatorDisabled();
+  }else if(button.value == "/" ){
+    display.value += "/";
+    addOperatorDisabled();
+  }else{
+    if(display.value ==""){
+    display.value = button.value;
+    removeDisabled();
+    }else{
+    display.value += button.value;
+    removeOperatorDisabled();
+    }}
 }
 
-if(display.value == ""){
-  addDisabled();
-}else{
-  removeDisabled();
-}
 
 
 // ディスプレイに何も表示されていない場合、押せないようにする 
@@ -45,6 +57,20 @@ function removeDisabled(){
     ZeroTwo.disabled = false;
     equals.disabled = false;
     plus.disabled = false;
+    multi.disabled = false;
+    divide.disabled = false;
+}
+
+function addOperatorDisabled() {
+    plus.disabled = true;
+    minus.disabled = true;
+    multi.disabled = true;
+    divide.disabled = true;
+}
+
+function removeOperatorDisabled() {
+    plus.disabled = false;
+    minus.disabled = false;
     multi.disabled = false;
     divide.disabled = false;
 }
