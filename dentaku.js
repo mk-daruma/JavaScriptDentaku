@@ -1,16 +1,12 @@
-function get_calc(button){
-  if (button.value=="=") {
-    document.dentaku.display.value = eval(document.dentaku.display.value);
-  }else if(button.value=="AC"){
-    document.dentaku.display.value = "";
-  }else {
-    if(button.value=="×"){
-      button.value= "*";
-    }else if(button.value=="÷"){
-      button.value="/";
-    }
-    document.dentaku.display.value += button.value;
-    document.dentaku.multi_btn.value="×";
-    document.dentaku.div_btn.value="÷";
+let display = document.getElementById("display");
+
+function btn(button){
+  // 画面にボタンを表示させる
+  display.value += button.value;
+  // 計算を実行させる、リセットさせるコード
+  if(button.value == "="){
+    display.value = eval(display.value);
+  }else if(button.value == "AC"){
+    display.value = "";
   }
 }

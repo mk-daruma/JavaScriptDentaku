@@ -8,57 +8,45 @@
     </head>
  
     <body>
-        <!--演算子にのみクラスを追加、ACは別の方がいいだろうか？-->
-      <form name="dentaku">
-        <!--先頭につけない0にクラス:NoLeadを追加-->
-       <table class="AllTabel">
-        <!--液晶画面-->
-         <tr>
-           <td colspan="4">
-             <input type="text" class="display" name="display" value="" disabled>
-           </td>
-         </tr>
-          
-          <!--１行目-->
-         <tr>
-           <td><input id="Btn" type="button" value="7" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="8" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="9" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="+" onclick="get_calc(this)"></td>
-         </tr>
-          
-          <!--２行目-->
-         <tr>
-           <td><input id="Btn" type="button" value="6" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="5" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="4" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="-" onclick="get_calc(this)"></td>
-         </tr>
-          
-          <!--３行目-->
-         <tr>
-           <td><input id="Btn" type="button" value="3" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="2" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="1" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="×" onclick="get_calc(this)"></td>
-         </tr>
+      <table>
+        <tr>
+          <td colspan="4"><input type="text" id="display" class="display" value=""/></td>
+        </tr>
         
-        <!--４行目-->
-         <tr>
-           <td><input id="Btn" type="button" value="0" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="00" onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="." onclick="get_calc(this)"></td>
-           <td><input id="Btn" type="button" value="÷" onclick="get_calc(this)"></td>
-         </tr>
-          
-          <!--５行目-->
-         <tr>
-           <td colspan="2"><input class="BtnWide"type="button" value="AC" onclick="get_calc(this)"></td>
-           <td colspan="2"><input class="BtnWide" type="button" value="=" onclick="get_calc(this)"></td>
-         </tr>
-           
-       </table>
-       <script src="dentaku.js"></script>
-      </form>
-     </body>
+        <tr>
+          <td><input type="button" class="Btn" value="7" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="8" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="9" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="+" onclick="btn(this)"/></td>
+        </tr>
+        
+        <tr>
+          <td><input type="button" class="Btn" value="4" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="5" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="6" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="-" onclick="btn(this)"/></td>
+        </tr>
+        
+        <tr>
+          <td><input type="button" class="Btn" value="1" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="2" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="3" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="*" onclick="btn(this)"/></td>
+        </tr>
+        
+        <tr>
+          <td><input type="button" class="Btn" value="0" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="00" onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="." onclick="btn(this)"/></td>
+          <td><input type="button" class="Btn" value="/" onclick="btn(this)"/></td>
+        </tr>
+        
+        <tr>
+          <td colspan="2"><input type="button" class="BtnWide" value="AC" onclick="btn(this)"/></td>
+          <td colspan="2"><input type="button" class="BtnWide" value="=" onclick="btn(this)"/></td>
+        </tr>
+        
+      </table>
+      <script src="dentaku.js"></script>
+    </body>
    </html>
